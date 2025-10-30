@@ -14,8 +14,12 @@
 [![Commits](https://badgen.net/github/commits/eliotttak/color-convert-js "Commits")][github_project_page]
 
 ## Introduction
-Color-convert.js is a little JavaScript Library, that convert between color formats, as RGB, HSL, CMYK and soon many others. It is light, and easy to use.
+Color-convert.js is a little JavaScript Library, that convert color formats, as RGB, HSL, CMYK and soon many others. It is light, and easy to use.
 
+## Availables conversions:
+- RGB <==> HSL
+- RGB <==> CMYK
+- HSL <==> CMYK
 
 ## Installation
 

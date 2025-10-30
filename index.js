@@ -44,7 +44,7 @@ const mod = (a, n) => ((a % n) + n) % n;
 
 
 /**
- * This function converts an RGB color set to HSL.
+ * This function converts an RGB color set into HSL.
  * @param {number} r The Red value
  * @param {number} g The Green value
  * @param {number} b The Blue value
@@ -68,24 +68,24 @@ export function rgbToHsl(
         }
     }
 ) {
-    maximums.hsl = maximums.hsl || {
+    maximums.hsl = maximums.hsl ?? {
         h: 360,
         s: 100,
         l: 100
     };
 
-    maximums.rgb = maximums.rgb || {
+    maximums.rgb = maximums.rgb ?? {
         r: 255,
         g: 255,
         b: 255
     };
 
-    maximums.hsl.h = maximums.hsl.h || 360;
-    maximums.hsl.s = maximums.hsl.s || 100;
-    maximums.hsl.l = maximums.hsl.l || 100;
-    maximums.rgb.r = maximums.rgb.r || 255;
-    maximums.rgb.g = maximums.rgb.g || 255;
-    maximums.rgb.b = maximums.rgb.b || 255;
+    maximums.hsl.h = maximums.hsl.h ?? 360;
+    maximums.hsl.s = maximums.hsl.s ?? 100;
+    maximums.hsl.l = maximums.hsl.l ?? 100;
+    maximums.rgb.r = maximums.rgb.r ?? 255;
+    maximums.rgb.g = maximums.rgb.g ?? 255;
+    maximums.rgb.b = maximums.rgb.b ?? 255;
 
     let r_ = r / maximums.rgb.r;
     let g_ = g / maximums.rgb.g;
@@ -147,7 +147,7 @@ export function rgbToHsl(
  */
 
 /**
- * This function converts an HSL color set to RGB.
+ * This function converts an HSL color set into RGB.
  * @param {number} h The Hue value
  * @param {number} s The Saturation value
  * @param {number} l The Lightness value
@@ -171,24 +171,24 @@ export function hslToRgb(
         }
     }
 ) {
-    maximums.hsl = maximums.hsl || {
+    maximums.hsl = maximums.hsl ?? {
         h: 360,
         s: 100,
         l: 100
     };
 
-    maximums.rgb = maximums.rgb || {
+    maximums.rgb = maximums.rgb ?? {
         r: 255,
         g: 255,
         b: 255
     };
 
-    maximums.hsl.h = maximums.hsl.h || 360;
-    maximums.hsl.s = maximums.hsl.s || 100;
-    maximums.hsl.l = maximums.hsl.l || 100;
-    maximums.rgb.r = maximums.rgb.r || 255;
-    maximums.rgb.g = maximums.rgb.g || 255;
-    maximums.rgb.b = maximums.rgb.b || 255;
+    maximums.hsl.h = maximums.hsl.h ?? 360;
+    maximums.hsl.s = maximums.hsl.s ?? 100;
+    maximums.hsl.l = maximums.hsl.l ?? 100;
+    maximums.rgb.r = maximums.rgb.r ?? 255;
+    maximums.rgb.g = maximums.rgb.g ?? 255;
+    maximums.rgb.b = maximums.rgb.b ?? 255;
 
     let h_ = h / maximums.hsl.h * 360;
     const s_ = s / maximums.hsl.s;
@@ -257,7 +257,7 @@ export function hslToRgb(
  */
 
 /**
- * A set of maximum values for HSL and RGB.
+ * A set of maximum values for CMYK and RGB.
  * @typedef {object} cmykRgbMaximums
  * @prop {cmykMaximums} [cmyk={ c: 1, m: 1, y: 1, k: 1 }] The CMYK maximum values
  * @prop {rgbMaximums} [rgb={ r: 255, g: 255, b: 255 }] The RGB maximum values
@@ -265,7 +265,7 @@ export function hslToRgb(
 
 
 /**
- * This function converts a CMYK color set to RGB.
+ * This function converts a CMYK color set into RGB.
  * @param {number} c The Cyan value
  * @param {number} m The Magenta value
  * @param {number} y The Yellow value
@@ -292,26 +292,26 @@ export function cmykToRgb(
         }
     }
 ) {
-    maximums.cmyk = maximums.cmyk || {
+    maximums.cmyk = maximums.cmyk ?? {
         c: 255,
         m: 255,
         y: 255,
         k: 255
     }
 
-    maximums.rgb = maximums.rgb || {
+    maximums.rgb = maximums.rgb ?? {
         r: 255,
         g: 255,
         b: 255
     }
 
-    maximums.cmyk.c = maximums.cmyk.c || 255
-    maximums.cmyk.m = maximums.cmyk.m || 255
-    maximums.cmyk.y = maximums.cmyk.y || 255
-    maximums.cmyk.k = maximums.cmyk.k || 255
-    maximums.rgb.r = maximums.rgb.r || 255
-    maximums.rgb.g = maximums.rgb.g || 255
-    maximums.rgb.b = maximums.rgb.b || 255
+    maximums.cmyk.c = maximums.cmyk.c ?? 255
+    maximums.cmyk.m = maximums.cmyk.m ?? 255
+    maximums.cmyk.y = maximums.cmyk.y ?? 255
+    maximums.cmyk.k = maximums.cmyk.k ?? 255
+    maximums.rgb.r = maximums.rgb.r ?? 255
+    maximums.rgb.g = maximums.rgb.g ?? 255
+    maximums.rgb.b = maximums.rgb.b ?? 255
 
     const c_ = c / maximums.cmyk.c
     const m_ = m / maximums.cmyk.m
@@ -347,7 +347,7 @@ export function cmykToRgb(
 
 
 /**
- * This function converts an RGB color set to CMYK.
+ * This function converts an RGB color set into CMYK.
  * @param {number} r The Red value
  * @param {number} g The Green value
  * @param {number} b The Blue value
@@ -372,26 +372,26 @@ export function rgbToCmyk(
         }
     }
 ) {
-    maximums.cmyk = maximums.cmyk || {
+    maximums.cmyk = maximums.cmyk ?? {
         c: 255,
         m: 255,
         y: 255,
         k: 255
     };
 
-    maximums.rgb = maximums.rgb || {
+    maximums.rgb = maximums.rgb ?? {
         r: 255,
         g: 255,
         b: 255
     };
 
-    maximums.cmyk.c = maximums.cmyk.c || 255;
-    maximums.cmyk.m = maximums.cmyk.m || 255;
-    maximums.cmyk.y = maximums.cmyk.y || 255;
-    maximums.cmyk.k = maximums.cmyk.k || 255;
-    maximums.rgb.r = maximums.rgb.r || 255;
-    maximums.rgb.g = maximums.rgb.g || 255;
-    maximums.rgb.b = maximums.rgb.b || 255;
+    maximums.cmyk.c = maximums.cmyk.c ?? 255;
+    maximums.cmyk.m = maximums.cmyk.m ?? 255;
+    maximums.cmyk.y = maximums.cmyk.y ?? 255;
+    maximums.cmyk.k = maximums.cmyk.k ?? 255;
+    maximums.rgb.r = maximums.rgb.r ?? 255;
+    maximums.rgb.g = maximums.rgb.g ?? 255;
+    maximums.rgb.b = maximums.rgb.b ?? 255;
 
     const r_ = r / maximums.rgb.r;
     const g_ = g / maximums.rgb.g;
@@ -419,5 +419,63 @@ export function rgbToCmyk(
     }
 
     return result
+}
+
+/**
+ * A set of maximum values for HSL and CMYK.
+ * @typedef {object} hslCmykMaximums
+ * @prop {cmykMaximums} [cmyk={ c: 1, m: 1, y: 1, k: 1 }] The CMYK maximum values
+ * @prop {hslMaximums} [hsl={ h: 360, s: 100, l: 100 }] The HSL maximum values
+ */
+
+/**
+ * This function converts an HSL color set into CMYK.
+ * @param {number} h The Hue value
+ * @param {number} s The Saturation value
+ * @param {number} l The Lightness value
+ * @param {hslCmykMaximums} [maximums={ hsl: { h: 360, s: 100, l: 100 }, cmyk: { c: 1, m: 1, y: 1, k: 1 } }] The maximum values for HSL (input) and CMYK (output)
+ * @returns {cmyk}
+ */
+export function hslToCmyk(h, s, l, maximums = {}) {
+    maximums.hsl = maximums.hsl ?? {}
+    maximums.cmyk = maximums.cmyk ?? {}
+
+    maximums.hsl.h = maximums.hsl.h || 360
+    maximums.hsl.s = maximums.hsl.s || 100
+    maximums.hsl.l = maximums.hsl.l || 100
+    maximums.cmyk.c = maximums.cmyk.c || 1
+    maximums.cmyk.m = maximums.cmyk.m || 1
+    maximums.cmyk.y = maximums.cmyk.y || 1
+    maximums.cmyk.k = maximums.cmyk.k || 1
+
+    let rgb = hslToRgb(h, s, l, { hsl: maximums.hsl })
+
+    return rgbToCmyk(rgb.r, rgb.g, rgb.b, { cmyk: maximums.cmyk })
+}
+
+/**
+ * This function converts a CMYK color set into HSL.
+ * @param {number} c The Cyan value
+ * @param {number} m The Magenta value
+ * @param {number} y The Yellow value
+ * @param {number} k The Key value
+ * @param {hslCmykMaximums} [maximums={ hsl: { h: 360, s: 100, l: 100 }, cmyk: { c: 1, m: 1, y: 1, k: 1 } }] The maximum values for CMYK (input) and HSL (output)
+ * @returns {hsl}
+ */
+export function cmykToHsl(c, m, y, k, maximums = {}) {
+    maximums.hsl = maximums.hsl ?? {}
+    maximums.cmyk = maximums.cmyk ?? {}
+
+    maximums.hsl.h = maximums.hsl.h || 360
+    maximums.hsl.s = maximums.hsl.s || 100
+    maximums.hsl.l = maximums.hsl.l || 100
+    maximums.cmyk.c = maximums.cmyk.c || 1
+    maximums.cmyk.m = maximums.cmyk.m || 1
+    maximums.cmyk.y = maximums.cmyk.y || 1
+    maximums.cmyk.k = maximums.cmyk.k || 1
+
+    let rgb = cmykToRgb(c, m, y, k, { cmyk: maximums.cmyk })
+
+    return rgbToHsl(rgb.r, rgb.g, rgb.b, { hsl: maximums.hsl })
 }
 
