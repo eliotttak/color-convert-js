@@ -1,5 +1,6 @@
 {
   "opts": {
-    "template": "node_modules/minami"
+    "template": "node_modules/minami",
+    "readme": "./README.md"
   }
 }
