@@ -2,7 +2,8 @@
 
 [![Latest version](https://badgen.net/npm/v/@eliotttak/color-convert.js "Latest version")][npm_project_page]
 [![Types](https://badgen.net/npm/types/@eliotttak/color-convert.js "Types")][npm_project_page]
-[![Total downloads](https://badgen.net/npm/dm/@eliotttak/color-convert.js "Total downloads")][npm_project_page]
+[![Total downloads](https://badgen.net/npm/dt/@eliotttak/color-convert.js "Total downloads")][npm_project_page]
+[![Weekly downloads](https://badgen.net/npm/dw/@eliotttak/color-convert.js "Weekly downloads")][npm_project_page]
 [![Node.js version](https://badgen.net/npm/node/@eliotttak/color-convert.js "Node.js version")][npm_project_page]
 [![Dependents](https://badgen.net/npm/dependents/@eliotttak/color-convert.js "Node.js version")][npm_project_page]
 
