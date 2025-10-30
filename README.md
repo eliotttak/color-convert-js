@@ -60,7 +60,7 @@ Output :
 </details>
 
 ## API
-You can find the documentation here :
+You can find the JSDoc documentation here : 
 
 [npm_project_page]: https://npmjs.org/package/@eliotttak/color-convert.js
 [github_project_page]: https://github.com/eliotttak/color-convert-js
