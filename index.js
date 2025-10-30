@@ -10,6 +10,21 @@
  */
 const mod = (a, n) => ((a % n) + n) % n;
 
+/**
+ * This function returns true if alls the values are of the specified type.
+ * @param {string} type 
+ * @param  {...any} values 
+ * @returns {boolean}
+ * @private
+ */
+function haveValidType(type, ...values) {
+    for (let value of values) {
+        if (typeof value != type) {
+            return false;
+        }
+    }
+    return true;
+}
 
 /**
  * A set of maximum values for R, G and B.
@@ -90,6 +105,10 @@ export function rgbToHsl(
     let r_ = r / maximums.rgb.r;
     let g_ = g / maximums.rgb.g;
     let b_ = b / maximums.rgb.b;
+
+    if (!haveValidType("number", r_, g_, b_)) {
+        return { h: NaN, s: NaN, l: NaN }
+    }
 
     if (r_ < 0 || r_ > 1 || g_ < 0 || g_ > 1 || b_ < 0 || b_ > 1) {
         throw new RangeError("'r', 'g' and 'b' shouldn't be uppon their respective maximum values .");
@@ -193,6 +212,12 @@ export function hslToRgb(
     let h_ = h / maximums.hsl.h * 360;
     const s_ = s / maximums.hsl.s;
     const l_ = l / maximums.hsl.l;
+
+    if (!haveValidType("number", h_, s_, l_)) {
+        return { r: NaN, g: NaN, b: NaN }
+    }
+
+
     if (h_ < 0 || h_ > 360 || s_ < 0 || s_ > 1 || l_ < 0 || l_ > 1) {
         throw new RangeError("'h', 's' and 'l' shouldn't be uppon their respective maximum values .");
     }
@@ -318,6 +343,11 @@ export function cmykToRgb(
     const y_ = y / maximums.cmyk.y
     const k_ = k / maximums.cmyk.k
 
+    if (!haveValidType("number", c_, m_, y_, k_)) {
+        return { r: NaN, g: NaN, b: NaN }
+    }
+
+
     if (c_ < 0 || c_ > 255 || m_ < 0 || m_ > 255 || y_ < 0 || y_ > 255 || k_ < 0 || k_ > 255) {
         throw new RangeError("'c', 'm', 'y' and 'k' shouldn't be uppon their respective maximum values .");
     }
@@ -396,6 +426,11 @@ export function rgbToCmyk(
     const r_ = r / maximums.rgb.r;
     const g_ = g / maximums.rgb.g;
     const b_ = b / maximums.rgb.b;
+
+    if (!haveValidType("number", r_, g_, b_)) {
+        return { c: NaN, m: NaN, y: NaN, k: NaN }
+    }
+
 
     if (r_ < 0 || r_ > 1 || g_ < 0 || g_ > 1 || b_ < 0 || b_ > 1) {
         throw new RangeError("'r', 'g' and 'b' shouldn't be uppon their respective maximum values .");

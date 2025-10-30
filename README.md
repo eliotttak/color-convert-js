@@ -48,10 +48,10 @@ Output :
 
 Add this line to you HTML
 ```html
-<script type="text/javascript" src="https://raw.githubusercontent.com/eliotttak/color-convert-js/refs/heads/main/index.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@eliotttak/color-convert.js"></script>
 ```
 
-And then you can use it in your scripts
+And then you can use it in your scripts:
 ```javascript
 console.table(rgbToHsl(0, 255, 0))
 ```
