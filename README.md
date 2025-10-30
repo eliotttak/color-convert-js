@@ -67,6 +67,12 @@ Output :
 ## API
 You can find the JSDoc documentation here : [Documentation]
 
-[npm_project_page]: https://npmjs.org/package/@eliotttak/color-convert.js
-[github_project_page]: https://github.com/eliotttak/color-convert-js
-[Documentation]: https://eliotttak.github.io/color-convert-js
+## Demo
+<iframe src="https://cdpn.io/pen/full/EaPewYJ" width="500" height="300"></iframe><br />
+
+If the site doesn't load, find the demo on CodePen : [cdpn.io/pen/full/EaPewYJ](https://cdpn.io/pen/full/EaPewYJ) 
+
+
+  [npm_project_page]: https://npmjs.org/package/@eliotttak/color-convert.js
+  [github_project_page]: https://github.com/eliotttak/color-convert-js
+  [Documentation]: https://eliotttak.github.io/color-convert-js
