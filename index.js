@@ -17,14 +17,8 @@ const mod = (a, n) => ((a % n) + n) % n;
  * @returns {boolean}
  * @private
  */
-function haveValidType(type, ...values) {
-    for (let value of values) {
-        if (typeof value != type) {
-            return false;
-        }
-    }
-    return true;
-}
+const haveValidType = (type, ...values) => values.every((value) => typeof value === type);
+
 
 /**
  * A set of maximum values for R, G and B.
@@ -512,5 +506,69 @@ export function cmykToHsl(c, m, y, k, maximums = {}) {
     let rgb = cmykToRgb(c, m, y, k, { cmyk: maximums.cmyk })
 
     return rgbToHsl(rgb.r, rgb.g, rgb.b, { hsl: maximums.hsl })
+}
+
+/**
+ * This function converts from hexadecimal color into RGB.
+ * @param {string} hex The hexadecimal color, in the format <code>#XXXXXX</code> or <code>XXXXXX</code>
+ * @param {rgbMaximums} maximums The RGB (output) maximum values
+ * @returns {rgb}
+ */
+export function hexToRgb(hex, maximums = {}) {
+    maximums.r = maximums.r ?? 255;
+    maximums.g = maximums.g ?? 255;
+    maximums.b = maximums.b ?? 255;
+
+    if (!/^#?[A-F0-9]{6}$/i.test(hex)) {
+        return { r: NaN, g: NaN, b: NaN }
+    }
+
+    hex = hex.replace("#", "")
+
+    /** @type {{r: string, g: string, b: string}} */
+    let rgbHex = {
+        r: hex.slice(0, 2),
+        g: hex.slice(2, 4),
+        b: hex.slice(4, 6)
+    }
+
+    return {
+        r: parseInt(rgbHex.r, 16) / 255 * maximums.r,
+        g: parseInt(rgbHex.g, 16) / 255 * maximums.g,
+        b: parseInt(rgbHex.b, 16) / 255 * maximums.b
+    }
+}
+
+/**
+ * This function converts from RGB color set into hexadecimal.
+ * @param {number} r The Red value
+ * @param {number} g The Green value
+ * @param {number} b The Blue value
+ * @param {rgbMaximums} maximums The RGB (output) maximum values
+ * @returns {string}
+ */
+export function rgbToHex(r, g, b, maximums = {}) {
+    maximums.r = maximums.r ?? 255;
+    maximums.g = maximums.g ?? 255;
+    maximums.b = maximums.b ?? 255;
+
+    let r_ = r / maximums.r * 255
+    let g_ = g / maximums.g * 255
+    let b_ = b / maximums.b * 255
+
+    if (!haveValidType("number", r_, g_, b_)) {
+        return ""
+    }
+
+    if (r_ < 0 || r_ > 255 || g_ < 0 || g_ > 255 || b_ < 0 || b_ > 255) {
+        throw new RangeError("'r', 'g' and 'b' shouldn't be uppon their respective maximum values .");
+    }
+
+    return (
+        "#" +
+        r_.toString(16).padStart(2, "0") +
+        g_.toString(16).padStart(2, "0") +
+        b_.toString(16).padStart(2, "0")
+    )
 }
 

@@ -3,7 +3,7 @@
 [![NPM Version](https://img.shields.io/npm/v/%40eliotttak%2Fcolor-convert.js?style=flat&label=Version&cacheSeconds=300&logoSize=1)][npm_project_page]
 [![Types](https://badgen.net/npm/types/@eliotttak/color-convert.js "Types")][npm_project_page]
 [![Total downloads](https://badges.ws/npm/dt/@eliotttak/color-convert.js?labelColor=%234C4C4C "Total downloads")][npm_project_page]
-[![Weekly downloads](https://badges.ws/npm/dw/@eliotttak/color-convert.js?labelColor=%234C4C4C "Weekly downloads")][npm_project_page]
+[![Weekly downloads](https://badges.ws/npm/dw/@eliotttak/color-convert.js?labelColor=%234xcC4C4C "Weekly downloads")][npm_project_page]
 [![Node.js version](https://badgen.net/npm/node/@eliotttak/color-convert.js "Node.js version")][npm_project_page]
 [![Dependents](https://badgen.net/npm/dependents/@eliotttak/color-convert.js "Node.js version")][npm_project_page]
 
@@ -20,6 +20,8 @@ Color-convert.js is a little JavaScript Library, that convert color formats, as 
 - RGB <==> HSL
 - RGB <==> CMYK
 - HSL <==> CMYK
+- RGB <==> Hexadecimal
+
 
 ## Installation
 
