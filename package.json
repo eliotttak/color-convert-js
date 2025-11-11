@@ -15,7 +15,7 @@
     "type": "git",
     "url": "git+https://github.com/eliotttak/color-convert-js.git"
   },
-  "license": "GPL-3.0",
+  "license": "LGPL-3.0",
   "author": "Eliott TAKVORIAN",
   "type": "module",
   "main": "index.js",

@@ -13,6 +13,21 @@
 [![Forks](https://badgen.net/github/forks/eliotttak/color-convert-js "Forks")][github_project_page]
 [![Commits](https://badgen.net/github/commits/eliotttak/color-convert-js "Commits")][github_project_page]
 
+## WARNING: LICENCE CHANGE
+I have changed the GPL licence to an LGPL (Lesser General Public Licence) licence,
+so that the package can be used in both open source and proprietary software.
+
+### Practical changes
+With the GPL licence, if you wanted to use my package, you **had to** license your project under the GPL.
+
+With the LGPL licence, you can use my package in a project licensed under Apache, for example.
+
+> However, if you wish to modify this package, it **must** remain under the LGPL licence.
+
+> Please note that this only applies to versions 2.0.0 and later; previous versions are still licensed under the GPL.
+
+Translated with DeepL.com (free version)
+
 ## Introduction
 Color-convert.js is a little JavaScript Library, that convert color formats, as RGB, HSL, CMYK and soon many others. It is light, and easy to use.
 
