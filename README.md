@@ -2,31 +2,15 @@
 
 [![NPM Version](https://img.shields.io/npm/v/%40eliotttak%2Fcolor-convert.js?style=flat&label=Version&cacheSeconds=300&logoSize=1)][npm_project_page]
 [![Types](https://badgen.net/npm/types/@eliotttak/color-convert.js "Types")][npm_project_page]
-[![Total downloads](https://badges.ws/npm/dt/@eliotttak/color-convert.js?labelColor=%234C4C4C "Total downloads")][npm_project_page]
-[![Weekly downloads](https://badges.ws/npm/dw/@eliotttak/color-convert.js?labelColor=%234xcC4C4C "Weekly downloads")][npm_project_page]
+[![Total downloads](https://badges.ws/npm/dt/@eliotttak/color-convert.js?labelColor=4C4C4C "Total downloads")][npm_project_page]
+[![Weekly downloads](https://badges.ws/npm/dw/@eliotttak/color-convert.js?labelColor=4C4C4C "Weekly downloads")][npm_project_page]
 [![Node.js version](https://badgen.net/npm/node/@eliotttak/color-convert.js "Node.js version")][npm_project_page]
-[![Dependents](https://badgen.net/npm/dependents/@eliotttak/color-convert.js "Node.js version")][npm_project_page]
 
 [![Stars](https://badgen.net/github/stars/eliotttak/color-convert-js "Stars")][github_project_page]
 [![Watchers](https://badgen.net/github/watchers/eliotttak/color-convert-js "Watchers")][github_project_page]
 [![License](https://badgen.net/github/license/eliotttak/color-convert-js "License")][github_project_page]
 [![Forks](https://badgen.net/github/forks/eliotttak/color-convert-js "Forks")][github_project_page]
 [![Commits](https://badgen.net/github/commits/eliotttak/color-convert-js "Commits")][github_project_page]
-
-## WARNING: LICENCE CHANGE
-I have changed the GPL licence to an LGPL (Lesser General Public Licence) licence,
-so that the package can be used in both open source and proprietary software.
-
-### Practical changes
-With the GPL licence, if you wanted to use my package, you **had to** license your project under the GPL.
-
-With the LGPL licence, you can use my package in a project licensed under Apache, for example.
-
-> However, if you wish to modify this package, it **must** remain under the LGPL licence.
-
-> Please note that this only applies to versions 2.0.0 and later; previous versions are still licensed under the GPL.
-
-Translated with DeepL.com (free version)
 
 ## Introduction
 Color-convert.js is a little JavaScript Library, that convert color formats, as RGB, HSL, CMYK and soon many others. It is light, and easy to use.
