@@ -24,7 +24,7 @@ Color-convert.js is a little JavaScript Library, that convert color formats, as 
 
 ## Installation
 
-<details><summary>Using NPM</span></summary>
+<details><summary>Using NPM</summary>
 
 First install in your project
 ```bash
@@ -45,7 +45,7 @@ Output :
 |    s    |  100   |
 |    l    |   50   |
 </details>
-<details><summary>In a website, using an URL</span></summary>
+<details><summary>In a website, using an URL</summary>
 
 Add this line to you HTML
 ```html
@@ -71,7 +71,7 @@ You can find the JSDoc documentation here : [Documentation]
 ## Demo
 <iframe src="https://cdpn.io/pen/full/EaPewYJ" width="500" height="300"></iframe><br />
 
-If the site doesn't load, find the demo on CodePen : [cdpn.io/pen/full/EaPewYJ](https://cdpn.io/pen/full/EaPewYJ) 
+If the demo doesn't load, find it on CodePen : [cdpn.io/pen/full/EaPewYJ](https://cdpn.io/pen/full/EaPewYJ) 
 
 
   [npm_project_page]: https://npmjs.org/package/@eliotttak/color-convert.js
